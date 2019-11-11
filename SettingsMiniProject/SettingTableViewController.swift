@@ -25,7 +25,11 @@ class SettingTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath) as? SettingTableViewCell else {return UITableViewCell()}
+        
+        let setting = SettingController.sharedInstance.setting[indexPath.row]
+        
+        cell.updateViews(with: setting)
         
         return cell
     }
