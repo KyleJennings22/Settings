@@ -13,6 +13,8 @@
 		1AD577A81CBEA8730074DBE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD577A61CBEA8730074DBE6 /* LaunchScreen.storyboard */; };
 		27BE4A872379D02900E86293 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BE4A862379D02900E86293 /* SettingTableViewCell.swift */; };
 		27BE4A892379D29F00E86293 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BE4A882379D29F00E86293 /* Setting.swift */; };
+		27BE4A8D2379D43A00E86293 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BE4A8C2379D43A00E86293 /* SettingController.swift */; };
+		27BE4A902379D67500E86293 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BE4A8F2379D67500E86293 /* SettingTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1AD577A91CBEA8730074DBE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27BE4A862379D02900E86293 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		27BE4A882379D29F00E86293 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		27BE4A8C2379D43A00E86293 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		27BE4A8F2379D67500E86293 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				9D5EF6421D90557000D4952C /* Resources */,
 				27BE4A8B2379D2E500E86293 /* Custom Views */,
 				27BE4A8A2379D2A300E86293 /* Model */,
+				27BE4A8E2379D43E00E86293 /* Model Controller */,
+				27BE4A912379D68100E86293 /* View Controller */,
 			);
 			path = SettingsMiniProject;
 			sourceTree = "<group>";
@@ -79,6 +85,22 @@
 				27BE4A862379D02900E86293 /* SettingTableViewCell.swift */,
 			);
 			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		27BE4A8E2379D43E00E86293 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27BE4A8C2379D43A00E86293 /* SettingController.swift */,
+			);
+			name = "Model Controller";
+			sourceTree = "<group>";
+		};
+		27BE4A912379D68100E86293 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27BE4A8F2379D67500E86293 /* SettingTableViewController.swift */,
+			);
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 		9D5EF6421D90557000D4952C /* Resources */ = {
@@ -164,9 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27BE4A8D2379D43A00E86293 /* SettingController.swift in Sources */,
 				27BE4A872379D02900E86293 /* SettingTableViewCell.swift in Sources */,
 				1AD5779E1CBEA8730074DBE6 /* AppDelegate.swift in Sources */,
 				27BE4A892379D29F00E86293 /* Setting.swift in Sources */,
+				27BE4A902379D67500E86293 /* SettingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
