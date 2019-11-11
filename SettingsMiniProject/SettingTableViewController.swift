@@ -31,6 +31,22 @@ class SettingTableViewController: UITableViewController {
         
         cell.updateViews(with: setting)
         
+        cell.cellDelegate = self
+        
         return cell
+    }
+}
+
+extension SettingTableViewController: SettingCellDelegate {
+    func settingSwitchTapped(for cell: SettingTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else {return}
+        // Need to find what cell was tapped on
+        
+        // So I can find the setting in the settings array that matches that index
+        let setting = SettingController.sharedInstance.setting[indexPath.row]
+        // toggle the setting change
+        SettingController.sharedInstance.toggleIsOn(for: setting)
+        // update view
+        cell.updateViews(with: setting)
     }
 }

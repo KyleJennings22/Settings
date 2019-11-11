@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol SettingCellDelegate: class {
+    func settingSwitchTapped(for cell: SettingTableViewCell)
+    
+}
+
 class SettingTableViewCell: UITableViewCell {
     
     // MARK: - OUTLETS
@@ -15,14 +20,13 @@ class SettingTableViewCell: UITableViewCell {
     @IBOutlet weak var settingNameLabel: UILabel!
     @IBOutlet weak var settingSwitch: UISwitch!
 
+    // Declare the delegate
+    weak var cellDelegate: SettingCellDelegate?
+    
     // MARK: - ACTIONS
     
     @IBAction func settingSwitchToggled(_ sender: Any) {
-        if settingSwitch.isOn {
-            self.backgroundColor = .cyan
-        } else {
-            self.backgroundColor = .white
-        }
+        cellDelegate?.settingSwitchTapped(for: self)
     }
     
     // MARK: - CUSTOM FUNCTIONS
@@ -32,10 +36,6 @@ class SettingTableViewCell: UITableViewCell {
         settingNameLabel.text = setting.settingName
         settingSwitch.isOn = setting.isOn
         
-        if setting.isOn {
-            self.backgroundColor = .cyan
-        } else {
-            self.backgroundColor = .white
-        }
+        self.backgroundColor = setting.isOn ? .cyan : .white
     }
 }
